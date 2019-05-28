@@ -1,0 +1,2 @@
+export LOG_GROUP_NAME=yyy
+export LOG_STREAM_NAME=xxx
