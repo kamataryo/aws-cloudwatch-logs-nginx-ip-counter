@@ -1,6 +1,6 @@
 const { promisify } = require('util')
 const fs = require('fs')
-const { LOG_STREAM_NAME } = process.env
+const { LOG_STREAM_NAME, LOG_INCLUSIVE_PATTERN } = process.env
 const readdir = promisify(fs.readdir)
 const readfile = promisify(fs.readFile)
 
@@ -12,7 +12,7 @@ const main = async () => {
   )).flatMap(data => JSON.parse(data.toString()).events)
 
   const ips = logs
-    .filter(log => log.message.includes('"POST /app/form-free '))
+    .filter(log => log.message.includes(''))
     .map(log => {
       return {
         timestamp: log.timestamp,

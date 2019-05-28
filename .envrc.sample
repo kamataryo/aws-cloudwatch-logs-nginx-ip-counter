@@ -1,2 +1,3 @@
 export LOG_GROUP_NAME=yyy
 export LOG_STREAM_NAME=xxx
+export LOG_INCLUSIVE_PATTERN="\"POST /app/form-free "
